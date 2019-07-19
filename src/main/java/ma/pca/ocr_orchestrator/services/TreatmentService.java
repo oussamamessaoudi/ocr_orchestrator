@@ -101,7 +101,10 @@ public class TreatmentService {
                             if (ocrResponse.getCode().isValid()) {
                                 Map<String, ResultCompare> resultCompare = compare(kyc, ocrResponse.getPrediction());
                                 if(!ocrResponse.getSpecimen_signature().isExists()){
-                                    resultFolder.getResultCompare().put("", ResultCompare.SPECIMEN_PROBLEM);
+                                    resultCompare.put("SpecimenSignature", ResultCompare.SPECIMEN_SIGNATURE_PROBLEM);
+                                }
+                                if(!ocrResponse.getSpecimen_lisibility().isReadable()){
+                                    resultCompare.put("SpecimenReadability", ResultCompare.SPECIMEN_PROBLEM);
                                 }
                                 if (resultCompare.isEmpty()) {
                                     resultFolder.setValid(true);

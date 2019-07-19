@@ -9,7 +9,8 @@ public enum MessageFeedbackAttribute {
     UN_CONFORMITY("Discordance"),
     CIN_PROBLEM("CIN problème"),
     NUMBER_PROBLEM("Problème de nombre"),
-    SPECIMEN_PROBLEM("SPECIMEN non lisable"),
+    SPECIMEN_PROBLEM("SPECIMEN non lisible"),
+    SPECIMEN_SIGNATURE_PROBLEM("SPECIMEN signature problème"),
     ALL_OKAY("ALL OKAY");
 
 

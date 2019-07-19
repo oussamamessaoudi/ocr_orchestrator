@@ -2,6 +2,7 @@ package ma.pca.ocr_orchestrator.ocr;
 
 import lombok.Data;
 import lombok.ToString;
+import ma.pca.ocr_orchestrator.beans.SpecimenReadable;
 import ma.pca.ocr_orchestrator.beans.SpecimenSignature;
 
 @Data
@@ -12,4 +13,5 @@ public class OcrResponse {
     private Cin prediction;
     private String error;
     private SpecimenSignature specimen_signature;
+    private SpecimenReadable specimen_lisibility;
 }

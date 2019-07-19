@@ -1,6 +1,5 @@
 package ma.pca.ocr_orchestrator.beans;
 
-import org.springframework.beans.factory.annotation.Autowired;
 
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;

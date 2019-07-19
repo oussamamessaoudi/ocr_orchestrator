@@ -5,6 +5,7 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 import lombok.ToString;
 
+import java.util.HashSet;
 import java.util.Set;
 
 @Data
@@ -19,8 +20,10 @@ public class ResultCompare {
     public static final ResultCompare CIN_PROBLEM = new ResultCompare(false, ErrorMessage.CIN_PROBLEM);
     public static final ResultCompare NUMBER_PROBLEM = new ResultCompare(false, ErrorMessage.NUMBER_PROBLEM);
     public static final ResultCompare SPECIMEN_PROBLEM = new ResultCompare(true, ErrorMessage.SPECIMEN_PROBLEM);
+    public static final ResultCompare SPECIMEN_SIGNATURE_PROBLEM  = new ResultCompare(false, ErrorMessage.SPECIMEN_SIGNATURE_PROBLEM);
 
     public static final ResultCompare ALL_OKAY = new ResultCompare(true, ErrorMessage.ALL_OKAY);
+
 
     public ResultCompare(boolean valid, ErrorMessage message) {
         this.valid = valid;
@@ -29,7 +32,7 @@ public class ResultCompare {
 
     private boolean valid;
     private ErrorMessage message;
-    private Set ocrData;
-    private Object kycData;
+    private Set ocrData = new HashSet();
+    private Object kycData = "";
 }
 

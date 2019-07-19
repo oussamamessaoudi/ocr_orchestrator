@@ -20,6 +20,7 @@ public class ErrorMessage {
     public static final ErrorMessage UN_CONFORMITY = new ErrorMessage(MessageFeedbackAttribute.UN_CONFORMITY, 2);
     public static final ErrorMessage NUMBER_PROBLEM = new ErrorMessage(MessageFeedbackAttribute.NUMBER_PROBLEM, 4);
     public static final ErrorMessage SPECIMEN_PROBLEM = new ErrorMessage(MessageFeedbackAttribute.SPECIMEN_PROBLEM, 0);
+    public static final ErrorMessage SPECIMEN_SIGNATURE_PROBLEM = new ErrorMessage(MessageFeedbackAttribute.SPECIMEN_SIGNATURE_PROBLEM, 0);
 
     public static final ErrorMessage ALL_OKAY = new ErrorMessage(MessageFeedbackAttribute.ALL_OKAY, 0);
 

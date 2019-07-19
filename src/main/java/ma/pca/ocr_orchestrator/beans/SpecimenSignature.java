@@ -12,7 +12,7 @@ public class SpecimenSignature {
     private final boolean exists;
 
     public static final SpecimenSignature SPECIMEN_SIGNATURE_VALID = new SpecimenSignature(true);
-    public static final SpecimenSignature SPECIMEN_SIGNATURE_NOT_VALID = new SpecimenSignature(true);
+    public static final SpecimenSignature SPECIMEN_SIGNATURE_NOT_VALID = new SpecimenSignature(false);
 
     @JsonValue
     String toValue(){
@@ -22,5 +22,10 @@ public class SpecimenSignature {
     @JsonCreator
     static SpecimenSignature fromValue(String value){
         return value.equals("oui")?SPECIMEN_SIGNATURE_VALID:SPECIMEN_SIGNATURE_NOT_VALID;
+    }
+
+    @Override
+    public String toString() {
+        return isExists()?"OUI":"NON";
     }
 }
