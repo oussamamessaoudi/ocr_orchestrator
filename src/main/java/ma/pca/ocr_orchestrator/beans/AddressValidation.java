@@ -21,7 +21,7 @@ public class AddressValidation extends AddressParentValidation {
                 totalFragment++;
             }
         }
-        if((double)validFragment/(double) totalFragment < 0.9 )
+        if((double)validFragment/(double) totalFragment < 0.8 )
             return ResultCompare.UN_CONFORMITY;
         return ResultCompare.ALL_OKAY;
     }

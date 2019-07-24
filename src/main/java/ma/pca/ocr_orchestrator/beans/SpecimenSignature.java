@@ -21,11 +21,11 @@ public class SpecimenSignature {
 
     @JsonCreator
     static SpecimenSignature fromValue(String value){
-        return value.equals("oui")?SPECIMEN_SIGNATURE_VALID:SPECIMEN_SIGNATURE_NOT_VALID;
+        return value.equals("Oui")?SPECIMEN_SIGNATURE_VALID:SPECIMEN_SIGNATURE_NOT_VALID;
     }
 
     @Override
     public String toString() {
-        return isExists()?"OUI":"NON";
+        return isExists()?"Oui":"Non";
     }
 }

@@ -17,6 +17,6 @@ public class AddressParentValidation {
     boolean containsWithAbbreviation(String big, String small, boolean isParent){
         Set<Set<String>> synonymousType= isParent ? allSynonymous.getSynonymousParent():allSynonymous.getSynonymousAddress();
         Optional<Set<String>> synonymous = synonymousType.stream().filter(names -> names.contains(small)).findFirst();
-        return synonymous.map(strings -> strings.stream().anyMatch(small::contains)).orElseGet(() -> big.contains(small));
+        return synonymous.map(strings -> strings.stream().anyMatch(big::contains)).orElseGet(() -> big.contains(small));
     }
 }
